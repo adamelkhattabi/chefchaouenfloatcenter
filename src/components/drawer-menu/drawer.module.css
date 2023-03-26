@@ -1,0 +1,39 @@
+.paper {
+    background-color: #050405;
+    width: 400px;
+    padding: 30px 50px;
+}
+
+.root {
+    background-color: transparent;
+}
+
+.link {
+    text-decoration: none;
+    color: white;
+    padding: 13px 0;
+    border-bottom: 1px solid #86B4EE;
+}
+
+.navbar {
+    display: flex;
+    flex-direction: column;
+}
+
+.closeButton {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    color: white;
+}
+
+.menuItem {
+    
+}
+
+@media (max-width: 767px) {
+    .paper {
+        width: 100vw;
+        padding: 20px;
+    }
+}

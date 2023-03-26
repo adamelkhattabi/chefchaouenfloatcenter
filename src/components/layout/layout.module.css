@@ -1,0 +1,39 @@
+.video {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -100;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    background: url('/images/stars@3x.jpg');
+    background-size: cover;
+}
+
+.background {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10% 0;
+}
+
+.top-container {
+    color: white;
+}
+
+.main-container {
+    background-color: white;
+    padding:20px;
+}

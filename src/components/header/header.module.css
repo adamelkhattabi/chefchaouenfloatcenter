@@ -1,0 +1,56 @@
+.header {
+    display: flex;
+    margin-top: 30px;
+    justify-content: space-between;
+    color: white;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.imageContainer {
+    width: 275px;
+}
+
+.button {
+    color: white;
+}
+
+@media (max-width: 767px) {
+    .header {
+        padding: 5px 15px;
+        margin-top: 0;
+        width: 100%;
+    }
+    .imageContainer {
+        width: 120px;
+        padding: 15px;
+    }
+}
+
+@media (min-width: 768px) {
+    .header {
+        width: 750px;
+    }
+    .imageContainer {
+        width: 120px;
+    }
+}
+
+@media (min-width: 992px) {
+    .header {
+        width: 970px;
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+    .imageContainer {
+        width: 170px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .header {
+        width: 1770px;
+    }
+}
