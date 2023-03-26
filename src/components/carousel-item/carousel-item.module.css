@@ -1,0 +1,12 @@
+.iconContainer {
+    text-align: center;
+    height: 150px;
+}
+
+.title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 23px;
+    font-weight: 600;
+    color: #4076a6;
+    margin-top: 30px;
+}
