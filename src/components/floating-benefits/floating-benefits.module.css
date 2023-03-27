@@ -1,0 +1,15 @@
+
+.bigScreen {
+    display: none;
+}
+
+@media (min-width: 992px) {
+    .smallScreen {
+        display: none;
+    }
+
+    .bigScreen {
+        display: flex;
+        justify-content: center;
+    }
+}

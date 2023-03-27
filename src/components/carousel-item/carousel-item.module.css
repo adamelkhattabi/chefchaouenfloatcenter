@@ -1,3 +1,7 @@
+.container {
+    padding: 0 15px;
+}
+
 .iconContainer {
     text-align: center;
     height: 150px;

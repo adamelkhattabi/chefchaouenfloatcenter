@@ -8,7 +8,7 @@ interface CarouselItemProps {
 
 export default function CarouselItem ({ title, imagePath, children }: CarouselItemProps) {
 
-    return (<div>
+    return (<div className={styles.container}>
         <div className={styles.iconContainer}>
             <img src={imagePath} />
         </div>
