@@ -3,6 +3,7 @@ import DrawerMenu from "../drawer-menu/drawer-menu.client";
 import { Container } from '@mui/material';
 import Header from "../header/header.client";
 import styles from "./layout.module.css";
+import Footer from '../footer/footer.client';
 
 interface LayoutProps {
     rtl?: boolean,
@@ -25,12 +26,19 @@ export default function Layout({ rtl = false, topContent, mainContent, footerCon
         <Container classes={{root: [styles.container, styles["top-container"]].join(" ")}} maxWidth={false} >
             {topContent}
         </Container>
-        <Container maxWidth={false} component={'main'} classes={{root: `${styles.container} ${styles["main-container"]}`}}>
+        <Container
+            maxWidth={false}
+            component={'main'}
+            classes={{root: `${styles.container} ${styles["main-container"]}`}}
+        >
             {mainContent}
         </Container>
-        <Container maxWidth={false} component={'footer'}>
-            {footerContent}
-        </Container>
+        <div className={`container-fluid ${styles["bottom-container"]}`}>
+            <div className='row'>
+                {footerContent}
+                <Footer />
+            </div>
+        </div>
         
         <DrawerMenu
             anchor={rtl ? 'left' : 'right'} 
@@ -38,6 +46,7 @@ export default function Layout({ rtl = false, topContent, mainContent, footerCon
             open={drawerOpen}
             onClose={() => { setDrawerOpen(false) }}
         />
+
         <div className={styles.background}>
             <video
                 className={styles.video}

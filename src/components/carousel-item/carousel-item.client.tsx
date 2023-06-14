@@ -13,6 +13,6 @@ export default function CarouselItem ({ title, imagePath, children }: CarouselIt
             <img src={imagePath} />
         </div>
         <h3 className={styles.title}>{title}</h3>
-        <p>{children}</p>
+        <p className={styles.description}>{children}</p>
     </div>)
 }

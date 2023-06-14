@@ -14,3 +14,11 @@
     color: #4076a6;
     margin-top: 30px;
 }
+
+.description {
+    font-family: 'Raleway', sans-serif;
+    font-size: 17px;
+    font-weight: 300;
+    line-height: 2;
+    color: #424753;
+}

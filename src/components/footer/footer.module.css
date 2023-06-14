@@ -1,0 +1,116 @@
+.footer {
+    width: 100%;
+    margin-bottom: 45px;
+}
+
+.footer_container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+}
+
+.footer_brand {
+    height: auto;
+    padding: 0 15px;
+    font-size: 18px;
+    line-height: 20px;
+    width: 240px;
+}
+
+.footer_info {
+    height: auto;
+    padding: 0 15px;
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: normal;
+    line-height: 2.85;
+    letter-spacing: -0.4px;
+    color: #ffffff;
+}
+
+.footer_info:hover {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.footer_mail {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.footer_social {
+    padding: 0;
+    margin: 0;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.footer_social li a {
+    float: left;
+    height: auto;
+    padding: 15px 15px;
+    font-size: 18px;
+    line-height: 20px;
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-box-shadow: 0 0 1px transparent;
+    box-shadow: 0 0 1px transparent;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: transform;
+    -webkit-transition-property: -webkit-transform;
+    transition-property: -webkit-transform;
+    transition-property: transform;
+    transition-property: transform, -webkit-transform;
+}
+
+@media (max-width: 992px) {
+    .footer_container {
+        flex-direction: column-reverse;
+    }
+
+    .footer__brand {
+        margin: 0;
+    }
+}
+
+@media (min-width: 992px) {
+    .footer_container {
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+        flex-direction: row;
+    }
+}
+
+@media (min-width: 768px) {
+    .footer_brand {
+        margin: 0 auto;
+    }
+
+    .footer_social {
+        -webkit-justify-content: space-around;
+        -ms-flex-pack: distribute;
+        justify-content: space-around;
+    }
+    
+}
+
+@media (max-width: 767px) {
+    .footer_brand {
+        margin: 0 auto;
+    }
+}
+

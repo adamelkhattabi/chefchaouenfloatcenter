@@ -37,3 +37,12 @@
     background-color: white;
     padding:20px;
 }
+
+.bottom-container {
+    background-image: url("/images/stars@3x.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom center;
+    position: relative;
+    overflow: hidden;
+}
