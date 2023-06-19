@@ -5,22 +5,34 @@ import styles from "./floating-benefits.module.css";
 
 export default function FloatingBenefits() {
 
+    let carouselItems = [
+        {
+            title: 'Reduces Anxiety & Stress',
+            imagePath: '/images/mandala@2x.png',
+            content: 'imparts more magnesium in your system and lowers levels of cortisol.in the absence of stimulants you achieve the same relaxation level of a 4 hours REM sleep within an hour of floating.'
+        },
+        {
+            title: 'Promotes mindfulness & deep meditation',
+            imagePath: '/images/lightbulb@2x.png',
+            content: 'Float tanks can be an ideal environment for meditation practices, as they provide a peaceful and distraction-free space that can help you to focus and achieve a deeper level of relaxation.'
+        },
+        {
+            title: 'Replenishes creativity and focus',
+            imagePath: '/images/dumbell@2x.png',
+            content: 'explore a dreamy state, The Theta State and deep relaxation of floating allows you to tap into the creative and intellectual power of your subconscious mind.'
+        }
+    ]
+
     return (<div className="container">
-            <SectionTitle>Floating benefits</SectionTitle>
-            <div className={styles.bigScreen}>
-            <CarouselItem imagePath='/images/lightbulb@2x.png' title='Creativity & Mindfulness'>
-                Spending time away from processing the external world allows your mind to slow down, organize itself and go on a journey of pure awareness.
-            </CarouselItem>
-            <CarouselItem imagePath='/images/mandala@2x.png' title='Stress and Anxiety release'>
-                Using the tank for even an hour can de-stress your nervous system and stop the production of stress hormones, leaving you feeling relaxed and re-energized.
-            </CarouselItem>
-            <CarouselItem imagePath='/images/dumbell@2x.png' title='Pain relief and muscle recovery'>
-                The Epsom salt in the water eases muscles and joints aches and stiffness and aids in reducing chronic pain and facilitating recovery from injuries.
-            </CarouselItem>
+        <SectionTitle>Floating benefits</SectionTitle>
+        <div className={styles.bigScreen}>
+            {carouselItems.map((item, index) => <CarouselItem key={index} imagePath={item.imagePath} title={item.title}>
+                {item.content}
+            </CarouselItem>)}
         </div>
 
         <div className={styles.smallScreen}>
-            <Carousel />
+            <Carousel carouselItems={carouselItems} />
         </div>
     </div>)
 }
