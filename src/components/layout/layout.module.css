@@ -46,3 +46,30 @@
     position: relative;
     overflow: hidden;
 }
+
+.header-section {
+    position: relative;
+    overflow: hidden;
+}
+
+.wave-bottom {
+    padding: 0;
+}
+
+.wave-bottom img {
+    width: 100%;
+    min-height: 100px;
+    position: relative;
+    bottom: -1px;
+}
+
+.wave-top {
+    position: relative;
+    margin-bottom: 45px;
+    padding: 0;
+}
+
+.wave-top img {
+    width: 100%;
+    min-height: 100px;
+}

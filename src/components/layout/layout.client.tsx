@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import DrawerMenu from "../drawer-menu/drawer-menu.client";
-import { Container } from '@mui/material';
 import Header from "../header/header.client";
 import styles from "./layout.module.css";
 import Footer from '../footer/footer.client';
@@ -22,19 +21,39 @@ export default function Layout({ rtl = false, topContent, mainContent, footerCon
     ]
 
     return(<div>
-        <Header buttonAction={() => { setDrawerOpen((open) => !open)}}/>
-        <Container classes={{root: [styles.container, styles["top-container"]].join(" ")}} maxWidth={false} >
-            {topContent}
-        </Container>
-        <Container
-            maxWidth={false}
-            component={'main'}
-            classes={{root: `${styles.container} ${styles["main-container"]}`}}
+        <div className={`container-fluid ${styles['header-section']}`}>
+            <div className='row'>
+                <div className={styles.background}>
+                    <video
+                        className={styles.video}
+                        autoPlay
+                        loop
+                        muted
+                        poster='/images/stars@3x.jpg'
+                    >
+                        <source src='/bg-video.mp4' type='video/mp4' />
+                    </video>
+                </div>
+                <Header buttonAction={() => { setDrawerOpen((open) => !open)}}/>
+                <div className={`container-fluid ${styles.container} ${styles["top-container"]}`} >
+                    {topContent}
+                </div>
+                <div className={styles['wave-bottom']}>
+                    <img src='/images/wave-bottom.png' />
+                </div>
+            </div>
+        </div>
+
+        <main
+            className={`container-fluid ${styles.container} ${styles["main-container"]}`}
         >
             {mainContent}
-        </Container>
+        </main>
         <div className={`container-fluid ${styles["bottom-container"]}`}>
             <div className='row'>
+                <div className={styles['wave-top']}>
+                    <img src='/images/wave-top.png' />
+                </div>
                 {footerContent}
                 <Footer />
             </div>
@@ -46,17 +65,5 @@ export default function Layout({ rtl = false, topContent, mainContent, footerCon
             open={drawerOpen}
             onClose={() => { setDrawerOpen(false) }}
         />
-
-        <div className={styles.background}>
-            <video
-                className={styles.video}
-                autoPlay
-                loop
-                muted
-                poster='/images/stars@3x.jpg'
-            >
-                <source src='/bg-video.mp4' type='video/mp4' />
-            </video>
-        </div>
     </div>)
 }
