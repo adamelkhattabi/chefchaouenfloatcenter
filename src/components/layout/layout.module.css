@@ -73,3 +73,11 @@
     width: 100%;
     min-height: 100px;
 }
+
+.btn-book-now {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    z-index: 1;
+    bottom: 10%;
+}

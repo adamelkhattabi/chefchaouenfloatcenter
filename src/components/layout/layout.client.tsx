@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import LinkButton from '../link-button/link-button.client';
 import DrawerMenu from "../drawer-menu/drawer-menu.client";
 import Header from "../header/header.client";
 import styles from "./layout.module.css";
@@ -53,6 +54,9 @@ export default function Layout({ rtl = false, topContent, mainContent, footerCon
             <div className='row'>
                 <div className={styles['wave-top']}>
                     <img src='/images/wave-top.png' />
+                    <div className={`container-fluid text-center ${styles["btn-book-now"]}`}>
+                        <LinkButton to='/pricing' label='Book Now' />
+                    </div>
                 </div>
                 {footerContent}
                 <Footer />
