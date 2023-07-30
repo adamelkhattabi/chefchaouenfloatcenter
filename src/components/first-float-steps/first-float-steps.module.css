@@ -1,0 +1,47 @@
+.container {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.image {
+    width: 100%;
+    
+}
+
+.image-container {
+    width: 65%;
+    padding: 18px;
+}
+
+.steps-list {
+    position: relative;
+    width: 35%;
+}
+
+.steps-list::after {
+    display: block;
+    position: absolute;
+    content: ' ';
+    z-index: 1;
+    width: 1px;
+    background-color: rgba(0,0,0,0.1);
+    height: 100%;
+    top: 0px;
+    left: 15px;
+}
+
+@media (max-width: 1399px) {
+    .image-container {
+        width: 100%;
+    }
+    
+    .steps-list {
+        width: 100%;
+    }
+}
+
+.steps-list > div:last-child {
+    margin-bottom: 15px;
+}
+
