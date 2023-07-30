@@ -1,4 +1,12 @@
 .container {
     margin-top: 60px;
     margin-bottom: 24px;
+    width: 100%;
+}
+
+@media (min-width: 1000px) {
+    .container {
+        display: flex;
+        justify-content: center;
+    }
 }

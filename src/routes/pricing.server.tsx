@@ -15,17 +15,17 @@ var tabs = [
           "One time offer for new customers",
           "Valid for 3 months",
           "Selection of organic herbal teas to enjoy post float",
-          "Save 28.71% on regular price"
+          "Save 29% on regular price"
         ],
       },
       {
-        title: "Introduction Pack",
+        title: "3 Floats Intro Pack",
         currencySymbol: "MAD ",
         price: 1200,
         interval: "Three floats Intro pack (MAD 400/float)",
         features: [
           "Each session lasts 60 minutes",
-          "Only for first time clients",
+          "One time offer for new customers",
           "Individual use",
           "Save 42 % on regular price",
           "Discover deeper benefits of floating",
@@ -76,6 +76,81 @@ var tabs = [
         ]
       },
     ]
+  },
+  {
+    header: 'Memberships',
+    offers: [
+      {
+        title: "1 float/month : 3 months commitment",
+        currencySymbol: "MAD ",
+        price: 400,
+        interval: "Month",
+        features: [
+          "One 60 min. float per month",
+          "Additional floats for 400 dh",
+          "Get 15 % off on 2 and 3 Float Packs or gift cards",
+          "Free upgrade to 90 min. floats (Subject to availability)",
+          "Discover deeper benefits of floating",
+          "Exclusive perks + partner benefits",
+          "3 Months minimum term only",
+          "Sessions are valid 12 months and unused sessions do roll over",
+          "Save 42% on regular price",
+          "At cancellation sessions expire after 30 days",
+          "Share floats with friends and family",
+          "Can be paused/freeze up to 3 months per calendar year"
+        ]
+      },
+      {
+        title: "2 floats/month :  3 months commitment",
+        currencySymbol: "MAD ",
+        price: 700,
+        interval: "Month. (MAD350/Float)",
+        features: [
+          "Two 60 min. float per month",
+          "Additional floats for 350 dh",
+          "Get 15 % off on 2 and 3 Float Packs or gift cards",
+          "Free upgrade to 90 min. floats (Subject to availability)",
+          "Discover deeper benefits of floating",
+          "Exclusive perks + partner benefits",
+          "3 Months minimum term only",
+          "Sessions are valid 12 months and unused sessions do roll over",
+          "Save 50% on regular price",
+          "At cancellation sessions expire after 30 days",
+          "Share floats with friends and family",
+          "Can be paused/freeze up to 3 months per calendar year",
+          "Get one free bonus float when you sign up for the first time. Bonus floats must be used within 30 days"
+        ]
+      },
+      {
+        title: "13 floats per year",
+        currencySymbol: "MAD ",
+        price: 3900,
+        interval: "13 floats available during a year (MAD300/float)",
+        features: [
+          "Free upgrade to 90 min. floats (Subject to availability)",
+          "Discover deeper benefits of floating",
+          "Exclusive perks + partner benefits",
+          "Sessions are valid 12 months and unused session do roll over",
+          "At cancellation sessions expire after 30 days",
+          "Share floats with friends and family"
+        ]
+      }
+    ]
+  },
+  {
+    header: "Gift Cards",
+    offers: [
+      {
+        title: "Single float voucher",
+        currencySymbol: "MAD ",
+        price: 700,
+        interval: "1 float for (MAD500 only if beneficiary's first float)",
+        features: [
+          "Valid for 12 months",
+          "If it's receiver's first time then the price is MAD500",
+        ]
+      }
+    ]
   }
 ]
 
@@ -84,10 +159,10 @@ export default function Pricing() {
   function renderTopContent() {
 
     return (
-      <div>
+      <>
         <h1>Your fist time at our center?</h1>
-        <p>Get yourself our first time floater deal: 60 min introduction float only <b>at 500DH instead of <i>700DH</i></b></p>
-      </div>
+        <p>Get yourself our first time floater deal: 60 min introduction float only <b>at 500DH instead of <i style={{ textDecoration: "line-through", fontStyle: "unset", textDecorationThickness: "0.2rem"}}>700DH</i></b></p>
+      </>
     )
   }
 

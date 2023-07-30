@@ -26,11 +26,12 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 10% 0;
+    padding: 6% 0;
 }
 
 .top-container {
     color: white;
+    text-align: center;
 }
 
 .main-container {

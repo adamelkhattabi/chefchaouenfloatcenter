@@ -24,10 +24,12 @@ export default function PricingTabs ({ tabs }: PricingTabsProps) {
         setIndex(newValue);
     };
 
-    return (<div>
+    return (<div className="container">
         <Tabs
             value={index}
             onChange={handleChange}
+            variant="scrollable"
+            scrollButtons="auto"
         >
             { headers.map((header, i) => <Tab label={header} key={i} />) }
         </Tabs>
