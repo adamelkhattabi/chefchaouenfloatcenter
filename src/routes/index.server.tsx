@@ -8,7 +8,7 @@ export default function Home() {
   function renderTopContent() {
 
     return (
-      <PageTitle title={'Being in a float tank is like relaxing in outer space. Switch off all your senses and escape into the void, restore your health to new levels and relax like never before.'} />
+      <PageTitle title={'Switch off all your senses and escape into the Void, restore your health to new levels and relax like never before.'} />
     )
   }
 
