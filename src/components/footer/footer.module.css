@@ -75,6 +75,10 @@
     transition-property: transform, -webkit-transform;
 }
 
+.footer_social li {
+    list-style-type: none;
+}
+
 @media (max-width: 992px) {
     .footer_container {
         flex-direction: column-reverse;
