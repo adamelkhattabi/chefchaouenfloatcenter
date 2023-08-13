@@ -10,7 +10,7 @@ export default function FloatTipItem({ title, description, icon } : FloatTipItem
 
     return (<div className={styles.container}>
         <div className={styles["icon-holder"]}>
-            <img src={`/Svg/${icon}.svg`} />
+            <img className={styles.icon} src={`/Svg/${icon}.svg`} />
         </div>
         <div className={styles.content}>
             <h4 className={styles.title}>{title}</h4>

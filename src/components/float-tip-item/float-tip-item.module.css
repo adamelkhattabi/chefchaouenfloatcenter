@@ -4,6 +4,10 @@
     position: relative;
 }
 
+.icon {
+    max-height: 100%;
+}
+
 .icon-holder {
     line-height: 45px;
     font-size: 45px;

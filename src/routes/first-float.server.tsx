@@ -63,7 +63,7 @@ const floatingTips = [
   {
     title: "Try Different Positions",
     description: "Everyone has different preferences: arms above head, pointed up at your side, or down by your body and if you find yourself getting uncomfortable, it can help to switch your arm position.",
-    icon: "yoga"
+    icon: "arm_flex"
   },
   {
     title: "No Expectations",
