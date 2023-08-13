@@ -17,8 +17,6 @@ export default function Layout({ rtl = false, topContent, mainContent, footerCon
         { label: 'Home', path: '/' },
         { label: 'First Float', path: '/first-float' },
         { label: 'Pricing', path: '/pricing' },
-        { label: 'About Floating', path: '/about-floating' },
-        { label: 'Contact Us', path: '/' },
     ]
 
     return(<div>
