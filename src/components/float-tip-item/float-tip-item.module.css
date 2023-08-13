@@ -31,9 +31,9 @@
     color: #46bee0;
 }
 
-/* .content {
-
-} */
+.content {
+    font-family: 'Nexa Book';
+}
 
 @media only screen and (max-width: 999px) {
     .container {

@@ -1,9 +1,9 @@
 .title {
-    font-family: 'ProximaNova', sans-serif;
+    font-family: 'Nexa Black', sans-serif;
+    text-transform: uppercase;
     font-size: 30px;
-    font-weight: 600;
     line-height: 1.56;
-    color: #4076a6;
+    color: #244aa5;
     position: relative;
     margin-top: 0;
 }

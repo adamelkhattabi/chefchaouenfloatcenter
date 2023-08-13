@@ -3,7 +3,7 @@
 }
 
 .header {
-    font-style: italic;
+    font-family: "Nexa Bold Italic";
 }
 
 @media (min-width: 992px) {

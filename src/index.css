@@ -1,10 +1,35 @@
+@font-face {
+    font-family: "Nexa Bold";
+    src: url("./assets/fonts/Nexa\ Bold.otf");
+}
+
+@font-face {
+    font-family: "Nexa Bold Italic";
+    src: url("./assets/fonts/Nexa-Bold-Italic_0.otf");
+}
+
+@font-face {
+    font-family: "Nexa Book";
+    src: url("./assets/fonts/Nexa-Book.otf");
+}
+
+@font-face {
+    font-family: "Nexa Black";
+    src: url("./assets/fonts/NexaBlack.otf");
+}
+
+@font-face {
+    font-family: "Nexa Regular";
+    src: url("./assets/fonts/NexaRegular.otf");
+}
+
 * {
     box-sizing: border-box;
 }
 
 body {
     margin: 0;
-    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: "Nexa Regular";
 }
 
 .content-section {
