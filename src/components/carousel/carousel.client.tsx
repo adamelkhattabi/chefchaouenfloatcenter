@@ -3,7 +3,7 @@ import CarouselItem from "../carousel-item/carousel-item.client";
 
 interface CarouselItemType {
   title: string,
-  imagePath: string,
+  image: string,
   content: string
 }
 
@@ -14,7 +14,7 @@ interface CarouselProps {
 export default function CustomCarousel({ carouselItems }: CarouselProps) {
 
     return (<Carousel animation="slide" duration={1000}>
-        {carouselItems.map((item, index) => <CarouselItem key={index} imagePath={item.imagePath} title={item.title}>
+        {carouselItems.map((item, index) => <CarouselItem key={index} image={item.image} title={item.title}>
                 {item.content}
             </CarouselItem>)}
       </Carousel>)

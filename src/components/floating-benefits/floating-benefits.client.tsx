@@ -1,38 +1,23 @@
-import Carousel from "../carousel/carousel.client";
-import CarouselItem from "../carousel-item/carousel-item.client";
 import SectionTitle from "../section-title/section-title.client";
-import styles from "./floating-benefits.module.css";
+import WhyFloatSection from "../why-float-section/why-float-section.client";
 
-export default function FloatingBenefits() {
+interface FloatingBenefitsProps {
+    sections: {
+        header: string,
+        reasons: {
+            title: string,
+            content: string,
+            image: string
+        }[]
+    }[]
+}
 
-    let carouselItems = [
-        {
-            title: 'Reduces Anxiety & Stress',
-            imagePath: '/images/mandala@2x.png',
-            content: 'Imparts more magnesium in your system and lowers levels of cortisol.in the absence of stimulants you achieve the same relaxation level of a 4 hours REM sleep within an hour of floating.'
-        },
-        {
-            title: 'Promotes mindfulness & deep meditation',
-            imagePath: '/images/lightbulb@2x.png',
-            content: 'Float tanks can be an ideal environment for meditation practices, as they provide a peaceful and distraction-free space that can help you to focus and achieve a deeper level of relaxation.'
-        },
-        {
-            title: 'Replenishes creativity and focus',
-            imagePath: '/images/dumbell@2x.png',
-            content: 'Explore a dreamy state, The Theta State and deep relaxation of floating allows you to tap into the creative and intellectual power of your subconscious mind.'
-        }
-    ]
+export default function FloatingBenefits({ sections }: FloatingBenefitsProps) {
 
     return (<div className="container">
-        <SectionTitle>Floating benefits</SectionTitle>
-        <div className={styles.bigScreen}>
-            {carouselItems.map((item, index) => <CarouselItem key={index} imagePath={item.imagePath} title={item.title}>
-                {item.content}
-            </CarouselItem>)}
-        </div>
-
-        <div className={styles.smallScreen}>
-            <Carousel carouselItems={carouselItems} />
-        </div>
+        <SectionTitle>Why Float</SectionTitle>
+        {
+            sections.map((section, index) => <WhyFloatSection {...section} key={index} />)
+        }
     </div>)
 }

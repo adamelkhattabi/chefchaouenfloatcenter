@@ -1,6 +1,9 @@
-
 .bigScreen {
     display: none;
+}
+
+.header {
+    font-style: italic;
 }
 
 @media (min-width: 992px) {
@@ -9,7 +12,7 @@
     }
 
     .bigScreen {
-        display: flex;
-        justify-content: center;
+        display: grid;
+        grid-template-columns: 33% 33% 33%;
     }
 }
