@@ -23,11 +23,11 @@
 }
 
 .title {
+    font-family: 'Nexa Bold';
     text-transform: none;
     letter-spacing: 0px;
     font-size: 20px;
     line-height: 30px;
-    font-weight: 700;
     color: #46bee0;
 }
 
