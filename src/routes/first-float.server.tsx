@@ -1,3 +1,4 @@
+import QuestionAnswers from '../components/questions-answers/questions-answers.client';
 import FirstFloatSteps from '../components/first-float-steps/first-float-steps.client';
 import FirstFloatTips from '../components/first-float-tips/first-float-tips.client';
 import Layout from '../components/layout/layout.client';
@@ -70,6 +71,85 @@ const floatingTips = [
     description: "There is no 'right' way to float, each and every session is different and it's important to not get caught up thinking you're doing it wrong. Breathe, let go and relax to go deeper.",
     icon: "thoughts"
   },
+];
+
+const commonConcerns = [
+  {
+    question: "What if I'm claustrophobic?",
+    answer: "Floats are customized to your comfort. you have the option to float with the lights on, music on, lid open, or however you prefer — you're in control of your float. Floaters report an expansive feeling rather than restricting thanks to our modern spacious tank."
+  },
+  {
+    question: "Can I float if I recently dyed my hair or spray tanned?",
+    answer: "No, the spray tan or hair dye can leak into the water and damage the float tanks. You want to make completely sure that no dye is coming out of your hair in the shower or on a towel after washing (usually within a few days to weeks depending on the treatment). Leave a minimum of 48 hours after a spray tan before floating"
+  },
+  {
+    question: "Can I float if I'm pregnant?",
+    answer: "Yes! There are many unique benefits that help relieve the pressure and tensions on the body during pregnancy, while also providing a deeper connection to your child. We recommend confirming with your doctor first however."
+  },
+  {
+    question: "Can I float if I have a new tattoo?",
+    answer: "You want to make sure it's been at least 30 days (or your tattoo has fully healed) before floating as the salt water can cause painful burning."
+  },
+  {
+    question: "Can I float if I'm menstruating?",
+    answer: "Yes, we simply recommend you follow the same protocol you would for a swimming pool."
+  }
+];
+
+const canIFloatConcerns = [
+  {
+    question: "Who is unable to float? When can I not float?",
+    answer: <>You can’t float if:
+      <ul>
+        <li>You have open wounds</li>
+        <li>You had diarrhea in the past 14 days</li>
+        <li>You have recently dyed your hair or applied tanning products</li>
+        <li>You have infectious diseases</li>
+        <li>You have got a recent tattoo</li>
+      </ul>
+    </>
+  },
+  {
+    question: "Can I drown if I fall asleep?",
+    answer: "No. It's common to fall asleep for parts or sometimes all of your float and the water is so buoyant that you always stay afloat. The worst that can happen is being woken by a little salt water in your eyes, though our non-drip tanks make this unlikely."
+  },
+  {
+    question: "How clean is the water ?",
+    answer: "We attach great importance to hygiene. This is why we have chosen the most efficient equipment on the market. In our pods, the materials used for heating, pumps, piping and filters are all food grade. Metal parts are titanium or medical grade stainless steel. The high concentration of Epsom salt in the water kills microorganisms, and the pods are equipped with advanced filtration systems, including exposure to UV-C, oxygenated water, and super-fine filtration (1 micron filter = 75 times finer than a hair). Every client showers before floating and the water is filtered four times after each session, ensuring the highest levels of hygiene and safety."
+  },
+  {
+    question: "Do I need to bring anything?",
+    answer: "No. We have some tips and recommendations above to consider the day of your appointment, however we provide everything you need for your session."
+  }
+];
+
+const faqQuestions = [
+  {
+    question: "How long are the floats sessions?",
+    answer: "Each float session appointment includes 60 minutes for you to be inside of the pod floating, with an additional 25 minutes that allows you to change and shower both before and after the appointment.We ask that you try to keep your showering brief to ensure we have enough time to clean up the room and get it ready for the next appointment. You can freshen up and take your time getting ready in our Vanity Room where we have moisturizer, hair dryers and other amenities. Plus, feel free to keep relaxing for as long as you’d like in our Relaxation Room with tea and some reading materials."
+  },
+  {
+    question: "When should I arrive for my appointment?",
+    answer: "For your first float session, we recommend arriving no later than 15 minutes before your scheduled appointment time. This ensures we can give you a full walkthrough beforehand without taking away from your time floating.Any float sessions past your first time, you can arrive 5 minutes before."
+  },
+  {
+    question: "What is your refund or return policy?",
+    answer: <>
+      <h5>1/ Float Sessions Refund Policy:</h5>
+      We understand that sometimes things come up and you may need to cancel or reschedule your float session. To receive a full refund, please cancel or reschedule at least 24 hours before your scheduled session time. Cancellations or rescheduling made less than 24 hours before the scheduled session will be subject to a cancellation fee of 50% of the session price. No-shows or late arrivals (20 minutes or more after the scheduled session start time) will forfeit their session without a refund. Refunds will be issued within 7 business days of cancellation.
+      <br /><br />
+      <h5>2/ Product Refund Policy:</h5>
+      We want you to be completely satisfied with any product you purchase from us. If for any reason you are not satisfied, please return the product within 14 days of purchase for a full refund. The product must be in its original packaging and in new, unused condition. Refunds will be issued within 7 business days of receipt of the returned product.
+    </>
+  },
+  {
+    question: "What's the minimum age for floating?",
+    answer: "Anyone 16 years old and up is able to float at our center currently."
+  },
+  {
+    question: "What happens if I get the saltwater in my eyes?",
+    answer: "It may sting a bit due to the amount of epsom salt in the water, so we recommend you avoid touching your face or placing your hands over your head at any time. Our float tanks are non-drip and we provide a water bottle to help flush out your eyes if this happens."
+  },
 ]
 
 export default function FirstFloat() {
@@ -100,6 +180,15 @@ export default function FirstFloat() {
       </div>
       <div className='container-fluid content-section'>
         <FirstFloatTips tips={floatingTips} />
+      </div>
+      <div className='container-fluid content-section'>
+        <QuestionAnswers title='Common Concerns' concerns={commonConcerns} />
+      </div>
+      <div className='container-fluid content-section'>
+        <QuestionAnswers title='Can I Float' concerns={canIFloatConcerns} />
+      </div>
+      <div className='container-fluid content-section'>
+        <QuestionAnswers title='FAQ' concerns={faqQuestions} />
       </div>
     </>
   }
