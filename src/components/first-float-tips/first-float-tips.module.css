@@ -1,5 +1,6 @@
 .tips-list {
     display: grid;
+    margin-top: 40px;
     grid-template-columns: 33% 33% 33%;
 }
 
