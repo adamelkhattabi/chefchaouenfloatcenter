@@ -1,9 +1,14 @@
 .title {
     line-height: 1.24;
     text-align: center;
-    font-weight: 300;
     display: inline-block;
-    font-family: 'Nexa Book', sans-serif;
+    font-family: 'Nexa Black', sans-serif;
+}
+
+.paragraph {
+    font-family: 'Nexa Bold';
+    font-size: 14pt;
+
 }
 
 @media (max-width: 767px) {

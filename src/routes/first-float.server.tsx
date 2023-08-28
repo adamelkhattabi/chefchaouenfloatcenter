@@ -157,10 +157,10 @@ export default function FirstFloat() {
 
     return (
       <>
-        <PageTitle title={'Find Out Who You Become With Floating'} />
-        <p>
-          Here's a guide to your first float experience to help ensure you tap into the deep relaxation and many benefits that it can provide.
-        </p>
+        <PageTitle
+          title={'Find Out Who You Become With Floating'}
+          paragraph={"Here's a guide to your first float experience to help ensure you tap into the deep relaxation and many benefits that it can provide."}
+          />
       </>
     )
   }

@@ -1,4 +1,5 @@
 import Layout from '../components/layout/layout.client';
+import PageTitle from '../components/page-title/page-title.client';
 import PricingTabs from '../components/pricing-tabs/pricing-tabs.client';
 
 var tabs = [
@@ -159,10 +160,12 @@ export default function Pricing() {
   function renderTopContent() {
 
     return (
-      <>
-        <h1>Your fist time at our center?</h1>
-        <p>Get yourself our first time floater deal: 60 min introduction float only <b>at 500DH instead of <i style={{ textDecoration: "line-through", fontStyle: "unset", textDecorationThickness: "0.2rem"}}>700DH</i></b></p>
-      </>
+      <PageTitle
+        title={'Your fist time at our center?'}
+        paragraph={<>
+          Get yourself our first time floater deal: 60 min introduction float only <b>at 500DH instead of <i style={{ textDecoration: "line-through", fontStyle: "unset", textDecorationThickness: "0.2rem"}}>700DH</i></b>
+        </>}
+      />
     )
   }
 
