@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="index.css" />
+    </head>
+    <body>
+        <main id="ticket-form">
+            <h1 class="no-print page-title">Ticket Printer</h1>
+            <div class="logo-container">
+                <img class="logo" src="assets/logo.png" />
+            </div>
+            <div class="no-print">
+                <select id="items-menu" onchange="handleSelectChange()">
+                    
+                </select>
+                <button onclick="addElement()">Add</button>
+            </div>
+            <div>
+                <h2 class="no-print">Selected Items</h2>
+                <Table id="items-list">
+                    <tr>
+                        <th>Item</th>
+                        <th>price</th>
+                    </tr>
+                </Table>
+                
+            </div>
+            <div>
+                <h2 class="inline-label">Total :</h2>
+                <span id="total">0</span>
+            </div>
+            <div id="thank-you" class="print-only">
+                <span>Thank you for your visit</span>
+            </div>
+            <div style="text-align: right;">
+                <span id="date"></span>
+            </div>
+            <div class="no-print">
+                <button onclick="handlePrint()">Print ticket</button>
+            </div>
+        </main>
+
+        <script src="index.js" type="application/javascript"></script>
+    </body>
+</html>
