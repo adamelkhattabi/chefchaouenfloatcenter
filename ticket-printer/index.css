@@ -44,14 +44,6 @@ th {
     text-align: left;
 }
 
-th:nth-child(1) {
-    width: 70%;
-}
-
-th:nth-child(2) {
-    width: 20%;
-}
-
 @media print {
     body {
         height: fit-content;
@@ -61,9 +53,14 @@ th:nth-child(2) {
     .no-print {
         display: none;
     }
+
+    .logo-container {
+        width: 100%;
+    }
 }
 
 @page {
+    size: 58mm 100%;
     margin: 0;
 }
 
