@@ -20,6 +20,15 @@
     padding: 5mm;
 }
 
+.item-form {
+    display: flex;
+    justify-content: space-between;
+}
+
+.item-input-container {
+    padding: 10px;
+}
+
 #items-list {
     width: 100%;
     margin: 1cm 0;

@@ -18,10 +18,12 @@ const items = [
 ];
 
 const selectedItems = [];
-var selectedIndex = 0;
+var currentItem = null;
 var totalPrice = 0;
 
 const selectElement = document.getElementById("items-menu");
+const quantityInput = document.getElementById("quantity-input");
+const priceInput = document.getElementById("price-input");
 const listElement = document.getElementById("items-list");
 const totalElement = document.getElementById("total");
 items.forEach((item, index) => {
@@ -32,7 +34,47 @@ items.forEach((item, index) => {
 });
 
 function handleSelectChange() {
-    selectedIndex = selectElement.value;
+    if (selectElement.value === "") {
+        setCurrentItem(null);
+        return;
+    }
+    var selectedIndex = selectElement.value;
+    setCurrentItem({
+        name: items[selectedIndex].title,
+        quantity: 1,
+        price: items[selectedIndex].price
+    });
+}
+
+function handleQuantityChange() {
+    setCurrentItem({
+        ...currentItem,
+        quantity: parseInt(quantityInput.value)
+    })
+}
+
+function handlePriceChange() {
+    setCurrentItem({
+        ...currentItem,
+        price: parseInt(priceInput.value)
+    })
+}
+
+function setCurrentItem(obj) {
+    currentItem = obj;
+    if (currentItem) {
+        Object.freeze(currentItem);
+
+        quantityInput.value = currentItem.quantity;
+        quantityInput.disabled = false;
+        priceInput.value = currentItem.price;
+        priceInput.disabled = false;
+    } else {
+        quantityInput.value = 1;
+        quantityInput.disabled = true;
+        priceInput.value = 0;
+        priceInput.disabled = true;
+    }
 }
 
 function clearTable(parent) {
@@ -52,7 +94,9 @@ function refreshPage() {
     selectedItems.forEach((item, index) => {
         const tableRow = document.createElement("tr");
         const tableRowItem = document.createElement("td");
-        tableRowItem.innerHTML = item.title;
+        tableRowItem.innerHTML = item.name;
+        const tableRowQuantity = document.createElement("td");
+        tableRowQuantity.innerHTML = item.quantity;
         const tableRowPrice = document.createElement("td");
         tableRowPrice.innerHTML = item.price;
         const tableRowButton = document.createElement("td");
@@ -61,6 +105,7 @@ function refreshPage() {
         tableRowButton.appendChild(deleteButton);
         tableRowButton.className = "no-print";
         tableRow.appendChild(tableRowItem);
+        tableRow.appendChild(tableRowQuantity)
         tableRow.appendChild(tableRowPrice);
         tableRow.appendChild(tableRowButton);
         listElement.appendChild(tableRow);
@@ -74,9 +119,11 @@ function setTotal() {
 }
 
 function addElement() {
-    const selectedItem = items[selectedIndex];
-    selectedItems.push({ ...selectedItem });
-    refreshPage();
+    if (currentItem) {
+        selectedItems.push(currentItem);
+        setCurrentItem(null);
+        refreshPage();
+    }
 }
 
 function handlePrint() {

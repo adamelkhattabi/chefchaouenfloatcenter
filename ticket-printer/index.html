@@ -9,16 +9,45 @@
                 <img class="logo" src="assets/logo.png" />
             </div>
             <div class="no-print">
-                <select id="items-menu" onchange="handleSelectChange()">
-                    
-                </select>
-                <button onclick="addElement()">Add</button>
+                <div class="item-form">
+                    <div class="item-input-container">
+                        <label for="product">Product item</label>
+                        <select name="product" id="items-menu" onchange="handleSelectChange()">
+                            <option></option>
+                        </select>
+                    </div>
+                    <div class="item-input-container">
+                        <label for="quantity">Quantity</label>
+                        <input
+                            disabled
+                            name="quantity"
+                            value="1"
+                            id="quantity-input"
+                            type="number"
+                            min="1"
+                            onchange="handleQuantityChange()"
+                        />
+                    </div>
+                    <div class="item-input-container">
+                        <label for="price">Price</label>
+                        <input
+                            disabled
+                            name="price"
+                            id="price-input"
+                            type="number"
+                            onchange="handlePriceChange()"
+                            min="0"
+                        />
+                    </div>
+                    <button onclick="addElement()">Add</button>
+                </div>
             </div>
             <div>
                 <h2 class="no-print">Selected Items</h2>
                 <Table id="items-list">
                     <tr>
                         <th>Item</th>
+                        <th>quantity</th>
                         <th>price</th>
                     </tr>
                 </Table>
