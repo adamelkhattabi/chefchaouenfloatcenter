@@ -3,6 +3,7 @@ import PageTitle from '../components/page-title/page-title.client';
 import VideoFrame from '../components/video-frame/video-frame.client';
 import FloatingBenefits from '../components/floating-benefits/floating-benefits.client';
 import SectionTitle from '../components/section-title/section-title.client';
+import ImagesGrid from '../components/images-grid/images-grid.client';
 
 const whyFloatSections = [
   {
@@ -68,11 +69,18 @@ export default function Home() {
       </div>
     </>
   }
+
+  function renderFooterContent() {
+    return <>
+      <ImagesGrid />
+    </>
+  }
   
   return <div>
     <Layout
       topContent={renderTopContent()}
       mainContent={renderMainContent()}
+      footerContent={renderFooterContent()}
     />
   </div>;
 }
