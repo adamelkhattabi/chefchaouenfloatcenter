@@ -61,7 +61,7 @@ export default function Home() {
       <div className='container-fluid content-section'>
         <div className='container'>
           <SectionTitle>About Floating</SectionTitle>
-          <VideoFrame videoUrl='https://www.youtube.com/embed/LCQfS3Rhu20' title='some video' />
+          <VideoFrame videoUrl='https://www.youtube.com/embed/darLHvRHjBY' title='some video' />
         </div>
       </div>
       <div className='container-fluid content-section'>
