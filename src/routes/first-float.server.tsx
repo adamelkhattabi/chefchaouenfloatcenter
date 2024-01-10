@@ -99,15 +99,14 @@ const commonConcerns = [
 const canIFloatConcerns = [
   {
     question: "Who is unable to float? When can I not float?",
-    answer: <>You can’t float if:
+    answer: `You can't float if:
       <ul>
         <li>You have open wounds</li>
         <li>You had diarrhea in the past 14 days</li>
         <li>You have recently dyed your hair or applied tanning products</li>
         <li>You have infectious diseases</li>
         <li>You have got a recent tattoo</li>
-      </ul>
-    </>
+      </ul>`
   },
   {
     question: "Can I drown if I fall asleep?",
@@ -133,16 +132,6 @@ const faqQuestions = [
     answer: "For your first float session, we recommend arriving no later than 15 minutes before your scheduled appointment time. This ensures we can give you a full walkthrough beforehand without taking away from your time floating.Any float sessions past your first time, you can arrive 5 minutes before."
   },
   {
-    question: "What is your refund or return policy?",
-    answer: <>
-      <h5>1/ Float Sessions Refund Policy:</h5>
-      We understand that sometimes things come up and you may need to cancel or reschedule your float session. To receive a full refund, please cancel or reschedule at least 24 hours before your scheduled session time. Cancellations or rescheduling made less than 24 hours before the scheduled session will be subject to a cancellation fee of 50% of the session price. No-shows or late arrivals (20 minutes or more after the scheduled session start time) will forfeit their session without a refund. Refunds will be issued within 7 business days of cancellation.
-      <br /><br />
-      <h5>2/ Product Refund Policy:</h5>
-      We want you to be completely satisfied with any product you purchase from us. If for any reason you are not satisfied, please return the product within 14 days of purchase for a full refund. The product must be in its original packaging and in new, unused condition. Refunds will be issued within 7 business days of receipt of the returned product.
-    </>
-  },
-  {
     question: "What's the minimum age for floating?",
     answer: "Anyone 16 years old and up is able to float at our center currently."
   },
@@ -155,14 +144,10 @@ const faqQuestions = [
 export default function FirstFloat() {
   function renderTopContent() {
 
-    return (
-      <>
-        <PageTitle
-          title={'Find Out Who You Become With Floating'}
-          paragraph={"Here's a guide to your first float experience to help ensure you tap into the deep relaxation and many benefits that it can provide."}
-          />
-      </>
-    )
+    return <PageTitle
+      title={'Find Out Who You Become With Floating'}
+      paragraph={"Here's a guide to your first float experience to help ensure you tap into the deep relaxation and many benefits that it can provide."}
+    />
   }
 
   function renderMainContent() {
