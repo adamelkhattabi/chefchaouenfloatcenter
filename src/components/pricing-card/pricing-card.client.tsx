@@ -1,12 +1,16 @@
 import styles from './pricing-card.module.css';
-import { Check } from '@mui/icons-material'
+import { Check } from '@mui/icons-material';
 
-export interface PricingCardProps {
+export interface Offer {
     title: string,
     currencySymbol: string,
-    price: number,
+    price: string,
     interval: string,
-    features: string[]
+    features: string[],
+}
+
+interface PricingCardProps extends Offer {
+    openModal: () => void
 }
 
 export default function PricingCard({
@@ -14,7 +18,8 @@ export default function PricingCard({
     currencySymbol = '$',
     price,
     interval,
-    features = []
+    features = [],
+    openModal
 }: PricingCardProps) {
     return (<div className={styles.mainContainer}>
         <h3 className={styles.title}>{title}</h3>
@@ -32,6 +37,9 @@ export default function PricingCard({
                             {feature}
                         </li>))}
                     </ul>
+                </div>
+                <div>
+                    <button onClick={openModal} className={styles.button}>Make reservation</button>
                 </div>
             </div>
         </div>
