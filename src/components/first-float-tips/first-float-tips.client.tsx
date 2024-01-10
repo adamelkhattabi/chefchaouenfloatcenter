@@ -2,7 +2,7 @@ import FloatTipItem from "../float-tip-item/float-tip-item.client";
 import SectionTitle from "../section-title/section-title.client";
 import styles from './first-float-tips.module.css';
 
-interface FristFloatTipsProps {
+interface FirstFloatTipsProps {
     tips: {
         title: string,
         description: string,
@@ -10,7 +10,7 @@ interface FristFloatTipsProps {
     }[]
 }
 
-export default function FirstFloatTips({ tips }: FristFloatTipsProps) {
+export default function FirstFloatTips({ tips }: FirstFloatTipsProps) {
 
     return (<div className="container">
         <SectionTitle>Tips to improve your float experience</SectionTitle>
