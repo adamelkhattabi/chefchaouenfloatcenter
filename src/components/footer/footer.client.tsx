@@ -1,5 +1,6 @@
 import styles from './footer.module.css';
 import { Link } from '@shopify/hydrogen';
+import { WhatsApp } from '@mui/icons-material';
 
 export default function Footer() {
 
@@ -25,12 +26,12 @@ export default function Footer() {
                         </a>
                         <ul className={styles.footer_social}>
                             <li>
-                                <a href='#'>
-                                    <img src='/images/f-b@2x.png' />
+                                <a href='https://wa.me/+212622156902' target='_blank'>
+                                    <WhatsApp />
                                 </a>
                             </li>
                             <li>
-                                <a href='https://www.instagram.com/chefchaouen_floating_center/' target='_blank'>
+                                <a href='https://www.instagram.com/chefchaouen_floatation_center/' target='_blank'>
                                     <img src='/images/insta@2x.png' />
                                 </a>
                             </li>
