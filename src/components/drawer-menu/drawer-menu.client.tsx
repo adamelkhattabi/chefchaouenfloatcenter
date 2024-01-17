@@ -38,7 +38,7 @@ export default function DrawerMenu({ links, anchor = 'right', open, onClose }: D
       <img width={'100%'} src="/images/logo___1_-removebg-preview.png" />
       <nav className={styles.navbar}>
         {links.map((link, index) =>
-          <Link key={index} className={styles.link} to={link.path}>
+          <Link onClick={onClose} key={index} className={styles.link} to={link.path}>
             {link.label}
           </Link>)}
       </nav>
